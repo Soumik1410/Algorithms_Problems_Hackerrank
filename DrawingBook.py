@@ -19,9 +19,11 @@ def pageCount(n, p):
     # Write your code here
     
     pagesfromstart = p//2
-    pagesfromend = (n - p)//2
-    if n % 2 == 0 and p == n - 1:
-        pagesfromend = 1
+
+    if n % 2 == 1:
+        pagesfromend = (n - p) // 2;
+    else:
+        pagesfromend = (n - p + 1) // 2;
     
     if pagesfromstart<pagesfromend:
         return pagesfromstart
